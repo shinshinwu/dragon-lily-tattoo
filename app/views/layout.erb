@@ -1,23 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title></title>
+    <title>Dragon Lily Tattoo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Dragonlily Tattoo</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a href="/location">Locations</a>
+                  </li>
+                  <li>
+                      <a href="/faq">FAQ</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="/galleries" class="dropdown-toggle" data-toggle="dropdown">Galleries <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li role="presentation" class="dropdown-header">Ft Lauderdale</li>
+                          <li>
+                              <a href="/galleries/lily">Lily</a>
+                          </li>
+                          <li>
+                              <a href="/galleries/doug">Doug</a>
+                          </li>
+                          <li role="presentation" class="divider"></li>
+                          <li role="presentation" class="dropdown-header">Rhode Island</li>
+                          <li>
+                              <a href="/galleries/christina">Christina</a>
+                          </li>
+                          <li>
+                              <a href="/galleries/rob">Rob</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="/contact">Contact</a>
+                  </li>
+                  <li>
+                      <a href="/blog">Blog</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
   <%= yield %>
+
+  <footer>
+      <div class="row">
+          <div class="col-lg-12">
+              <p>Copyright &copy; Dragon Lily Tattoo 2014</p>
+          </div>
+      </div>
+  </footer>
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script src="/js/application.js"></script>
 </body>
 </html>
