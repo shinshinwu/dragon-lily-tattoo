@@ -6,5 +6,5 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
     $('.carousel').carousel({
         interval: 2000 //changes the speed
-    })
+    });
 });

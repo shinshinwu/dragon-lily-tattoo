@@ -27,11 +27,15 @@ get "/galleries/christina" do
 end
 
 get "/galleries/rob" do
-  erb :rob
+  erb :rob, :layout => false
 end
 
 get "/contact" do
   erb :contact
+end
+
+get "/appointment" do
+  erb :appointment
 end
 
 get "/blog" do
