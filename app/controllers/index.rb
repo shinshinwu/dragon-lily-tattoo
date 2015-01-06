@@ -38,6 +38,12 @@ get "/appointment" do
   erb :appointment
 end
 
+post "/appointment" do
+  @new_customer = Customer.create(first_name: params[:customer][:first_name], last_name: params[:customer][:last_name], phone: params[:customer][:phone], email: params[:customer][:email])
+  @new_appointment = Appointment.create(in_fl: params[:appointment][:value?], date: Chronic.parse("#{params[:appointment][:date]}"))
+  erb :booking
+end
+
 get "/blog" do
   erb :blog
 end
