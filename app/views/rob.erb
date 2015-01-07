@@ -18,6 +18,11 @@
           body {
             background-color: grey;
           }
+
+          .page-title {
+            margin-top: 50px;
+          }
+
           .centered {
             margin: auto auto;
             display: block;
@@ -74,6 +79,68 @@
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+          <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Dragonlily Tattoo</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a href="/location">Locations</a>
+                  </li>
+                  <li>
+                      <a href="/faq">FAQ</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="/galleries" class="dropdown-toggle" data-toggle="dropdown">Galleries <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li role="presentation" class="dropdown-header">Ft Lauderdale</li>
+                          <li>
+                              <a href="/galleries/lily">Lily</a>
+                          </li>
+                          <li>
+                              <a href="/galleries/doug">Doug</a>
+                          </li>
+                          <li role="presentation" class="divider"></li>
+                          <li role="presentation" class="dropdown-header">Rhode Island</li>
+                          <li>
+                              <a href="/galleries/christina">Christina</a>
+                          </li>
+                          <li>
+                              <a href="/galleries/rob">Rob</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="/contact" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="/contact">Get In Touch</a>
+                          </li>
+                          <li>
+                              <a href="/appointment">Book an Consultation</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="/blog">Blog</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
 
         <div class="container gallery">
             <h2 class="page-title">Rob's Gallery</h2>

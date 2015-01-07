@@ -34,6 +34,16 @@ get "/contact" do
   erb :contact
 end
 
+post "/contact" do
+  new_message = Message.create(params[:message])
+  if request.xhr?
+    erb :_message, locals: {message: new_message}
+  else
+    # implement error message
+    redirect '/contact'
+  end
+end
+
 get "/appointment" do
   erb :appointment
 end
@@ -41,7 +51,6 @@ end
 post "/appointment" do
   @new_customer = Customer.create(first_name: params[:customer][:first_name], last_name: params[:customer][:last_name], phone: params[:customer][:phone], email: params[:customer][:email])
   @new_appointment = Appointment.create(in_fl: params[:appointment][:value?], date: Chronic.parse("#{params[:appointment][:date]}"))
-  erb :booking
 end
 
 get "/blog" do

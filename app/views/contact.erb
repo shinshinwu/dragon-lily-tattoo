@@ -1,6 +1,6 @@
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="contact">
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
@@ -55,33 +55,33 @@
         <!-- /.row -->
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
+        <div class="row" id="form">
             <div class="col-md-8">
                 <h3>Send us a Message</h3>
-                <form name="sentMessage" id="contactForm" novalidate>
+                <form name="sentMessage" id="contactForm" method="post" action="/contact">
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Full Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" name="message[name]">
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                            <input type="tel" class="form-control" name="message[phone]">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                            <input type="email" class="form-control" name="message[email]">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                            <textarea rows="10" cols="100" class="form-control" name="message[message]" maxlength="999" style="resize:none"></textarea>
                         </div>
                     </div>
                     <div id="success"></div>
@@ -95,3 +95,21 @@
 
         <hr>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').submit(function(e){
+                e.preventDefault();
+
+                var url = $(this).attr('action');
+                var data = $(this).serialize();
+
+                $.post(url, data, function(response){
+                    $('#form').remove();
+                    $('#contact').append("<h3>Thank you for contacting us, below is the message that have been send to Admin and someone will reach out to you shortly.");
+                    $('#contact').append(response);
+                })
+            });
+
+        });
+    </script>
